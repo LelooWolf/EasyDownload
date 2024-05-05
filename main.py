@@ -18,7 +18,7 @@ import subprocess
 #         self.extend(self._stringio.getvalue().splitlines())
 #         del self._stringio    # free up some memory
 #         sys.stdout = self._stdout
-testvar = subprocess.run(["yt-dlp","https://www.youtube.com/watch?v=BQvGUyxbxWc -o \'%temp%\\EasyDownloader\\%(title)s.%(ext)s\'","-q"],capture_output=True, shell=True)
+testvar = subprocess.run(["yt-dlp","https://www.youtube.com/watch?v=dQw4w9WgXcQ -o \'%temp%\\EasyDownloader\\%(title)s.%(ext)s\'","-q"],capture_output=True, shell=True)
 if testvar.stderr != 0:
     error_string = str(testvar.stderr)[2:]
     error_string = error_string.replace("\\n","\n")
